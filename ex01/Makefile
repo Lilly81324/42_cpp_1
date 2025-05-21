@@ -1,10 +1,9 @@
 NAME = zombie
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 
 all: $(NAME)
@@ -20,9 +19,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-
-run:
-	valgrind --leak-check=full ./$(NAME)
 
 re: fclean all
 
