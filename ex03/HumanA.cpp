@@ -16,8 +16,8 @@ HumanA::HumanA(const std::string& name, Weapon& weapon )
 {
 	this->name = name;
 	this->weapon = &weapon;
-	std::cout << name << " enters the fight with a";
-	std::cout << weapon.getType() << std::endl;
+	std::cout << name << " enters the fight with a [";
+	std::cout << this->weapon->getType() << "]" << std::endl;
 }
 
 HumanA::~HumanA( void )
@@ -27,6 +27,6 @@ HumanA::~HumanA( void )
 
 void HumanA::attack( void )
 {
-	std::cout << this->name << " attacks with their ";
-	std::cout << this->weapon->getType() << std::endl;
+	std::cout << this->name << " attacks with their [";
+	std::cout << this->weapon->getType() << "]" << std::endl;
 }

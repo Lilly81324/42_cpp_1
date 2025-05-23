@@ -32,14 +32,14 @@ void HumanB::attack( void )
 	}
 	else
 	{
-		std::cout << this->name << " attacks with their ";
-		std::cout << this->weapon->getType() << std::endl;
+		std::cout << this->name << " attacks with their [";
+		std::cout << this->weapon->getType() << "]" <<  std::endl;
 	}
 }
 
 void HumanB::setWeapon( Weapon &weapon )
 {
 	this->weapon = &weapon;
-	std::cout << name << " arms themself with a ";
-	std::cout << weapon.getType() << std::endl;
+	std::cout << name << " arms themself with a [";
+	std::cout << weapon.getType() << "]" << std::endl;
 }

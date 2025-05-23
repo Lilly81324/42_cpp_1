@@ -15,7 +15,7 @@
 Weapon::Weapon( const std::string& type)
 {
 	this->type = type;
-	std::cout << "A " << type << "appears" << std::endl;
+	std::cout << "A [" << type << "] appears" << std::endl;
 }
 
 Weapon::~Weapon( void )
@@ -28,5 +28,7 @@ const std::string& Weapon::getType( void )
 
 void Weapon::setType( std::string type)
 {
+	std::cout << "[" << this->type << "] transformed into [";
+	std::cout << type << "]" << std::endl;
 	this->type = type;
 }
