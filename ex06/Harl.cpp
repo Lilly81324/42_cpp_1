@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:01:35 by sikunne           #+#    #+#             */
-/*   Updated: 2025/05/26 16:39:24 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/05/26 17:22:07 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,22 +71,29 @@ void Harl::complain( std::string level )
 		&Harl::error};
 
 	height = input_to_level(level);
-	switch (height)
+	while (height < 5)
 	{
-		case 0:
-			(this->*complainPtr[0])();
-			__attribute__ ((fallthrough));
-		case 1:
-			(this->*complainPtr[1])();
-			__attribute__ ((fallthrough));
-		case 2:
-			(this->*complainPtr[2])();
-			__attribute__ ((fallthrough));
-		case 3:
-			(this->*complainPtr[3])();
-			break ;
-		default:
-			std::cout << "[ Probably complaining about insignificant problems ]";
-			std::cout << std::endl;
-	};
+		switch (height)
+		{
+			case 0:
+				(this->*complainPtr[height++])();
+				break ;
+			case 1:
+				(this->*complainPtr[height++])();
+				break ;
+			case 2:
+				(this->*complainPtr[height++])();
+				break ;
+			case 3:
+				(this->*complainPtr[height])();
+				height = 5;
+				break ;
+			default:
+				std::cout << "[ Probably complaining about insignificant problems ]";
+				std::cout << std::endl;
+				height++;
+				break ;
+		}
+	}
+	;
 }
