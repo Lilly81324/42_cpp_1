@@ -20,7 +20,6 @@ class HumanB
 	private:
 		Weapon*	weapon;
 		std::string name;
-		bool armed;
 	public:
 		HumanB( const std::string& );
 		~HumanB( void );

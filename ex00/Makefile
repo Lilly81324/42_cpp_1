@@ -21,7 +21,7 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-run:
+run: $(NAME)
 	valgrind --leak-check=full ./$(NAME)
 
 re: fclean all

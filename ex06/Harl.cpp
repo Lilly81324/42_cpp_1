@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:01:35 by sikunne           #+#    #+#             */
-/*   Updated: 2025/05/26 17:22:07 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/05/26 17:53:56 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void Harl::complain( std::string level )
 			default:
 				std::cout << "[ Probably complaining about insignificant problems ]";
 				std::cout << std::endl;
-				height++;
+				height = 5;
 				break ;
 		}
 	}

@@ -20,8 +20,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-run:
-	valgrind --leak-check=full ./$(NAME)
+run: $(NAME)
+	./tester.sh
 
 re: fclean all
 
